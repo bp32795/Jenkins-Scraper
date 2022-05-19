@@ -32,7 +32,7 @@ def disable_jobs(server,epoch):
                 print("Last date was " + str(datetime.fromtimestamp(build_info.get('timestamp') / 1000)))
             except:
                 print(jobName + " was not disabled." )
-        elif last_build_time > 1609459200:
+        elif last_build_time > epoch:
             print(jobName + " was last built "+str(datetime.fromtimestamp(build_info.get('timestamp') / 1000)))
         elif color == "disabled":
             print(jobName + " was already disabled.")
